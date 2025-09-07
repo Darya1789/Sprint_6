@@ -6,3 +6,6 @@
 
 Установить зависимости проекта:
 pip3 install -r requirements.txt
+
+создать отчет:
+allure serve allure_results
