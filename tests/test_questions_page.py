@@ -15,7 +15,7 @@ class TestPageQuestions():
     
     
     @classmethod
-    def setup_class(cls):
+    def setup_method(cls):
         # создали драйвер для браузера Chrome
         cls.driver = webdriver.Firefox()
         
@@ -33,6 +33,6 @@ class TestPageQuestions():
 
     
     @classmethod
-    def teardown_class(cls):
+    def teardown_method(cls):
         # закрыли браузер
         cls.driver.quit() 

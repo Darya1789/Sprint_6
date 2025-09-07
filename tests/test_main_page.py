@@ -1,25 +1,15 @@
 import allure
-import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-import locators
 from locators.main_page_locators import MainPageLocators
-from locators.dzen_page_locators import DzenPageLocators
-
-from pages import dzen_page
 import urls
 from pages.main_page import MainPage
 from pages.dzen_page import DzenPage
-
-from data import ExpectedTest, Data
 
 class TestMain():
     driver = None
     
     @classmethod
-    def setup_class(cls):
+    def setup_method(cls):
         # создали драйвер для браузера Chrome
         cls.driver = webdriver.Firefox()
         
@@ -53,6 +43,6 @@ class TestMain():
 
     
     @classmethod
-    def teardown_class(cls):
+    def teardown_method(cls):
         # закрыли браузер
         cls.driver.quit() 
